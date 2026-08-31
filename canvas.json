@@ -1,0 +1,11 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1440, "h": 2500 },
+    { "file": "Mobil.dc.html", "x": 1600, "y": 0, "w": 390, "h": 2450 }
+  ],
+  "annotations": [
+    { "id": "note-desktop", "x": 0, "y": -90, "w": 400, "text": "Skrivebord" },
+    { "id": "note-mobil", "x": 1600, "y": -90, "w": 300, "text": "Mobil" }
+  ],
+  "launch": { "view": "canvas" }
+}

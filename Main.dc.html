@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root{
+      --paper:oklch(0.965 0.012 85);
+      --paper-2:oklch(0.925 0.014 80);
+      --ink:oklch(0.22 0.02 260);
+      --ink-soft:oklch(0.44 0.02 260);
+      --ink-faint:oklch(0.60 0.015 260);
+      --forest:oklch(0.42 0.075 155);
+      --forest-900:oklch(0.24 0.05 155);
+      --glacier:oklch(0.55 0.075 220);
+      --line:oklch(0.85 0.012 80);
+      --white:oklch(0.99 0.003 90);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;}
+    a{color:var(--forest);text-decoration:none;}
+    a:hover{color:var(--forest-900);}
+    .serif{font-family:"DM Serif Display",Georgia,serif;}
+    .sans{font-family:Manrope,"Segoe UI",system-ui,sans-serif;}
+    .eyebrow{font-family:Manrope,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+    .btn{display:inline-flex;align-items:center;gap:9px;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:16px 30px;border-radius:3px;cursor:pointer;white-space:nowrap;}
+    .btn-primary{background:var(--forest-900);color:var(--white);border:1px solid var(--forest-900);}
+    .btn-ghost-dark{background:transparent;color:var(--white);border:1px solid oklch(0.99 0.003 90 / 0.55);}
+    .btn-ghost-light{background:transparent;color:var(--forest-900);border:1px solid var(--forest-900);}
+    .navlink{font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:var(--ink);}
+    .navlink:hover{color:var(--forest-900);}
+    .card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+    .card-title{font-family:"DM Serif Display",Georgia,serif;font-size:24px;color:var(--ink);margin:0 0 10px 0;}
+    .card-text{font-family:Manrope,sans-serif;font-size:15.5px;line-height:1.65;color:var(--ink-soft);margin:0 0 18px 0;}
+    .card-link{font-family:Manrope,sans-serif;font-size:14px;font-weight:700;color:var(--forest-900);display:inline-flex;align-items:center;gap:6px;}
+    .fact{font-family:Manrope,sans-serif;font-size:14.5px;font-weight:600;color:var(--ink);}
+    .foot-h{font-family:Manrope,sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.99 0.003 90 / 0.5);margin:0 0 18px 0;}
+    .foot-link{font-family:Manrope,sans-serif;font-size:15px;color:oklch(0.99 0.003 90 / 0.88);}
+    .foot-link:hover{color:var(--white);}
+  </style>
+</helmet>
+
+<div style="width:1440px;background:var(--paper);font-family:Manrope,sans-serif;">
+
+  <!-- NAV -->
+  <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:92px;background:var(--paper);border-bottom:1px solid var(--line);">
+    <div style="display:flex;align-items:baseline;gap:10px;">
+      <span class="serif" style="font-size:27px;color:var(--ink);letter-spacing:.01em;">Fossberg</span>
+      <span class="eyebrow" style="color:var(--ink-faint);">Hotell · Lom</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:40px;">
+      <a class="navlink" href="#">Overnatting</a>
+      <a class="navlink" href="#">Trim &amp; trivsel</a>
+      <a class="navlink" href="#">Konferanse</a>
+      <a class="navlink" href="#">Lom</a>
+      <a class="navlink" href="#">Kontakt</a>
+    </div>
+    <div class="btn btn-primary">Book opphald</div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative;height:700px;width:100%;overflow:hidden;">
+    <img src="hero-terrace-sm.jpg" alt="Uteservering på Fossberg Hotell" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, oklch(0.18 0.02 255 / 0.15) 0%, oklch(0.18 0.02 255 / 0.20) 45%, oklch(0.16 0.02 255 / 0.82) 100%);"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;padding:0 64px 72px 64px;display:flex;flex-direction:column;gap:22px;max-width:760px;">
+      <div class="eyebrow" style="color:oklch(0.99 0.003 90 / 0.85);">Lom sentrum · Gudbrandsdalen</div>
+      <h1 class="serif" style="margin:0;font-size:60px;line-height:1.08;color:var(--white);">Der Bøvra renn kvit og vill gjennom Prestfossen.</h1>
+      <p class="sans" style="margin:0;font-size:17.5px;line-height:1.65;color:oklch(0.99 0.003 90 / 0.88);max-width:600px;">Fossberg Hotell ligg midt i hjarta av Lom – komfortable rom, hytter og bobilplassar, god mat i kafeteria og spisesal, og eit trim- og trivselssenter med basseng rett ved elva.</p>
+      <div style="display:flex;gap:16px;margin-top:6px;">
+        <div class="btn btn-primary">Book opphald</div>
+        <div class="btn btn-ghost-dark">Sjå rom og hytter</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK FACTS STRIP -->
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line);">
+    <div style="display:flex;align-items:center;gap:14px;padding:26px 40px;border-right:1px solid var(--line);color:var(--forest-900);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7c1.5 1.6 3.5 1.6 5 0s3.5-1.6 5 0 3.5 1.6 5 0 3.5-1.6 5 0"/><path d="M2 13c1.5 1.6 3.5 1.6 5 0s3.5-1.6 5 0 3.5 1.6 5 0 3.5-1.6 5 0"/><path d="M2 19c1.5 1.6 3.5 1.6 5 0s3.5-1.6 5 0 3.5 1.6 5 0 3.5-1.6 5 0"/></svg>
+      <span class="fact">Symjebasseng &amp; badstove</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;padding:26px 40px;border-right:1px solid var(--line);color:var(--forest-900);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v8a2 2 0 0 0 4 0V2"/><path d="M8 10v12"/><path d="M17 2c-1.7 0-3 2-3 5s1.3 5 3 5v10"/></svg>
+      <span class="fact">Kafeteria med uteservering</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;padding:26px 40px;border-right:1px solid var(--line);color:var(--forest-900);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+      <span class="fact">Ladestasjon for el-bil</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;padding:26px 40px;color:var(--forest-900);">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.8-3.6 3.4-5.6 6.5-5.6s5.7 2 6.5 5.6"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 14.6c2.5.2 4.4 2.1 5 5.4"/></svg>
+      <span class="fact">Konferanselokale</span>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div style="padding:96px 64px 100px 64px;">
+    <div style="max-width:640px;margin:0 0 56px 0;">
+      <div class="eyebrow" style="color:var(--forest-900);margin-bottom:14px;">Opphald i fjell-Noreg</div>
+      <h2 class="serif" style="margin:0;font-size:40px;color:var(--ink);">Frå hotellrom til fjelltoppar</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;">
+
+      <div class="card">
+        <img src="hotel-exterior-sm.jpg" alt="Fossberg Hotell sin fasade" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="padding:28px 26px 30px 26px;">
+          <h3 class="card-title">Rom, hytter og bobilplass</h3>
+          <p class="card-text">Komfortable hotellrom med dusj, toalett og TV, koselege hytter og leilegheiter, og bobilplassar – rett i hjarta av Lom sentrum.</p>
+          <a class="card-link" href="#">Sjå overnatting
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="pool-sm.jpg" alt="Symjebasseng på Fossberg Hotell" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="padding:28px 26px 30px 26px;">
+          <h3 class="card-title">Trim, symjing og kvile</h3>
+          <p class="card-text">Innandørs basseng for store og små, badstove, treningsrom med godt utstyr og eiga squashbane.</p>
+          <a class="card-link" href="#">Opningstider trim
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="lom-street-sm.jpg" alt="Lom sentrum" style="width:100%;height:220px;object-fit:cover;display:block;">
+        <div style="padding:28px 26px 30px 26px;">
+          <h3 class="card-title">Fjell, fjord og folkeliv</h3>
+          <p class="card-text">Lom ligg midt mellom Oslo, Bergen og Trondheim – kort veg til Galdhøpiggen, Glittertind, Besseggen og fjordane i vest.</p>
+          <a class="card-link" href="#">Utforsk Lom
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ACTIVITIES BAND -->
+  <div style="background:var(--forest-900);padding:88px 64px;">
+    <div style="max-width:620px;margin:0 0 56px 0;">
+      <div class="eyebrow" style="color:oklch(0.99 0.003 90 / 0.55);margin-bottom:14px;">Ute i fjellet</div>
+      <h2 class="serif" style="margin:0 0 16px 0;font-size:36px;color:var(--white);">Aktivitetar rett utanfor døra</h2>
+      <p class="sans" style="margin:0;font-size:16.5px;line-height:1.65;color:oklch(0.99 0.003 90 / 0.75);">Same om du vil opp på breen, ut på sykkelsetet eller berre nyte utsikta – Lom er startpunktet.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="color:oklch(0.99 0.003 90 / 0.9);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19 9 7l4 6 2-3 7 9"/><path d="M13.5 12.5 15 10"/></svg>
+        </div>
+        <h3 class="serif" style="margin:0;font-size:21px;color:var(--white);">Fjellturar &amp; toppar</h3>
+        <p class="sans" style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.99 0.003 90 / 0.68);">Galdhøpiggen, Glittertind og Besseggen er alle innan rekkevidde for ein dagstur.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="color:oklch(0.99 0.003 90 / 0.9);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 18 6"/><path d="M6 20 20 8"/><circle cx="17" cy="7" r="1.4" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3 class="serif" style="margin:0;font-size:21px;color:var(--white);">Bre &amp; sommarski</h3>
+        <p class="sans" style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.99 0.003 90 / 0.68);">Køyr breveg til Juvasshytta og prøv sommarski med utsikt over Jotunheimen.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="color:oklch(0.99 0.003 90 / 0.9);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3"/><path d="M9 5h6"/><path d="M6 22V11l6-4 6 4v11"/><path d="M6 22h12"/><path d="M12 22v-6"/></svg>
+        </div>
+        <h3 class="serif" style="margin:0;font-size:21px;color:var(--white);">Kultur &amp; historie</h3>
+        <p class="sans" style="margin:0;font-size:15px;line-height:1.6;color:oklch(0.99 0.003 90 / 0.68);">Lomskyrkja stavkyrkje, Norsk Fjellmuseum og Bergverkssenteret ligg alle i gangavstand.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:var(--ink);padding:80px 64px 32px 64px;">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid oklch(0.99 0.003 90 / 0.14);">
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <span class="serif" style="font-size:25px;color:var(--white);">Fossberg</span>
+        <p class="sans" style="margin:0;font-size:14.5px;line-height:1.6;color:oklch(0.99 0.003 90 / 0.6);max-width:220px;">Hotell, hytter og kafeteria i hjarta av Lom.</p>
+        <div style="display:flex;gap:14px;margin-top:8px;color:oklch(0.99 0.003 90 / 0.75);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.5A2 2 0 0 0 10.5 10.5V12H9v2h1.5v6h2v-6H14l.4-2h-1.9v-1.2c0-.5.3-.8.8-.8H14Z" fill="currentColor" stroke="none"/></svg>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">Kontakt</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <a class="foot-link" href="#" style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2.2 2A17 17 0 0 1 2 6.2 2 2 0 0 1 4 4Z"/></svg>
+            61 21 22 50
+          </a>
+          <a class="foot-link" href="#" style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg>
+            booking@fossberg.no
+          </a>
+          <span class="foot-link" style="display:flex;align-items:center;gap:10px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.4 7-12.6A7 7 0 0 0 5 9.4C5 14.6 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            Lom sentrum, Noreg
+          </span>
+        </div>
+      </div>
+      <div>
+        <div class="foot-h">Snarvegar</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <a class="foot-link" href="#">Overnatting</a>
+          <a class="foot-link" href="#">Trim &amp; trivsel</a>
+          <a class="foot-link" href="#">Konferanse</a>
+          <a class="foot-link" href="#">Kontakt / jobb</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;background:oklch(0.99 0.003 90 / 0.06);border-radius:4px;padding:26px;">
+        <span class="serif" style="font-size:19px;color:var(--white);">Klar for fjellet?</span>
+        <p class="sans" style="margin:0;font-size:13.5px;line-height:1.5;color:oklch(0.99 0.003 90 / 0.6);">Book rom, hytte eller konferanse på få minutt.</p>
+        <div class="btn btn-primary" style="justify-content:center;background:var(--white);color:var(--forest-900);border-color:var(--white);">Book opphald</div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:26px;">
+      <span class="sans" style="font-size:13px;color:oklch(0.99 0.003 90 / 0.4);">© Fossberg Hotell 2026</span>
+      <span class="sans" style="font-size:12px;color:oklch(0.99 0.003 90 / 0.3);letter-spacing:.04em;">Designutkast til ny nettside – ikkje i drift</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
