@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "om_oss"
+    label: "Om oss – historie"
+    files:
+      - file: "data/om-oss.json"
+        label: "Historie-tidslinje"
+        name: "om_oss"
+        fields:
+          - label: "Tidslinje"
+            name: "tidslinje"
+            widget: "list"
+            summary: "{{aar}} – {{tittel}}"
+            fields:
+              - { label: "År", name: "aar", widget: "string" }
+              - { label: "Tittel", name: "tittel", widget: "string" }
+              - { label: "Tekst", name: "tekst", widget: "text" }
