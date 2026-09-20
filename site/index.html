@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-page="forside">
     <div class="nav">
       <div class="nav-logo">
         <span class="serif">Fossberg</span>
@@ -62,6 +62,7 @@
       style="position: relative; height: 700px; width: 100%; overflow: hidden"
     >
       <img
+        id="hero-bilete"
         src="assets/hero-terrace-sm.jpg"
         alt="Uteservering på Fossberg Hotell"
         style="
@@ -97,10 +98,11 @@
           max-width: 760px;
         "
       >
-        <div class="eyebrow" style="color: oklch(0.99 0.003 90 / 0.85)">
+        <div id="hero-eyebrow" class="eyebrow" style="color: oklch(0.99 0.003 90 / 0.85)">
           Lom sentrum · Gudbrandsdalen
         </div>
         <h1
+          id="hero-tittel"
           class="serif"
           style="
             margin: 0;
@@ -112,6 +114,7 @@
           Der Bøvra renn kvit og vill gjennom Prestfossen.
         </h1>
         <p
+          id="hero-tekst"
           style="
             margin: 0;
             font-size: 17.5px;
@@ -278,13 +281,14 @@
       >
         <a class="card" href="overnatting.html" style="color: inherit">
           <img
+            id="kort1-bilete"
             src="assets/hotel-exterior-sm.jpg"
             alt="Fossberg Hotell sin fasade"
             style="width: 100%; height: 220px; object-fit: cover"
           />
           <div style="padding: 28px 26px 30px 26px">
-            <h3 class="card-title">Rom, hytter og bobilplass</h3>
-            <p class="card-text">
+            <h3 id="kort1-tittel" class="card-title">Rom, hytter og bobilplass</h3>
+            <p id="kort1-tekst" class="card-text">
               Komfortable hotellrom med dusj, toalett og TV, koselege hytter og
               leilegheiter, og bobilplassar – rett i hjarta av Lom sentrum.
             </p>
@@ -309,13 +313,14 @@
 
         <a class="card" href="trim-og-trivsel.html" style="color: inherit">
           <img
+            id="kort2-bilete"
             src="assets/pool-sm.jpg"
             alt="Symjebasseng på Fossberg Hotell"
             style="width: 100%; height: 220px; object-fit: cover"
           />
           <div style="padding: 28px 26px 30px 26px">
-            <h3 class="card-title">Trim, symjing og kvile</h3>
-            <p class="card-text">
+            <h3 id="kort2-tittel" class="card-title">Trim, symjing og kvile</h3>
+            <p id="kort2-tekst" class="card-text">
               Innandørs basseng for store og små, badstove og treningsrom med
               godt utstyr.
             </p>
@@ -340,13 +345,14 @@
 
         <a class="card" href="lom.html" style="color: inherit">
           <img
+            id="kort3-bilete"
             src="assets/lom-street-sm.jpg"
             alt="Lom sentrum"
             style="width: 100%; height: 220px; object-fit: cover"
           />
           <div style="padding: 28px 26px 30px 26px">
-            <h3 class="card-title">Fjell, fjord og folkeliv</h3>
-            <p class="card-text">
+            <h3 id="kort3-tittel" class="card-title">Fjell, fjord og folkeliv</h3>
+            <p id="kort3-tekst" class="card-text">
               Lom ligg midt mellom Oslo, Bergen og Trondheim – kort veg til
               Galdhøpiggen, Glittertind, Besseggen og fjordane i vest.
             </p>
@@ -579,6 +585,7 @@
           <div class="foot-h">Kontakt</div>
           <div style="display: flex; flex-direction: column; gap: 14px">
             <a
+              data-cms="telefon"
               class="foot-link"
               href="tel:61212250"
               style="display: flex; align-items: center; gap: 10px"
@@ -600,6 +607,7 @@
               61 21 22 50
             </a>
             <a
+              data-cms="epost"
               class="foot-link"
               href="mailto:booking@fossberg.no"
               style="display: flex; align-items: center; gap: 10px"
@@ -620,6 +628,7 @@
               booking@fossberg.no
             </a>
             <span
+              data-cms="adresse"
               class="foot-link"
               style="display: flex; align-items: center; gap: 10px"
             >
@@ -705,6 +714,7 @@
         >
       </div>
     </div>
+    <script src="assets/content.js" defer></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       if (window.netlifyIdentity) {

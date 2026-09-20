@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="lom">
 
 <div class="nav">
   <div class="nav-logo">
@@ -36,17 +36,17 @@
 </div>
 
 <div class="subhero">
-  <img src="assets/lom-street-sm.jpg" alt="Lom sentrum">
+  <img id="hero-bilete" src="assets/lom-street-sm.jpg" alt="Lom sentrum">
   <div class="overlay"></div>
   <div class="content">
     <div class="eyebrow" style="color:oklch(0.99 0.003 90 / 0.85);margin-bottom:12px;">Lom</div>
-    <h1 class="serif" style="margin:0;font-size:44px;color:var(--white);">Startpunktet for fjell-Noreg</h1>
+    <h1 id="hero-tittel" class="serif" style="margin:0;font-size:44px;color:var(--white);">Startpunktet for fjell-Noreg</h1>
   </div>
 </div>
 
 <div class="section">
   <div class="section-heading">
-    <p style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Lom ligg midt mellom Oslo, Bergen og Trondheim, og er eit av dei beste utgangspunkta for å oppleve både fjell-Noreg og Vestlandet – på kort avstand til fjelltoppar, brear og fjordar.</p>
+    <p id="intro-tekst" style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Lom ligg midt mellom Oslo, Bergen og Trondheim, og er eit av dei beste utgangspunkta for å oppleve både fjell-Noreg og Vestlandet – på kort avstand til fjelltoppar, brear og fjordar.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;">
 
@@ -55,15 +55,15 @@
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="display:flex;gap:16px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M2 19 9 7l4 6 2-3 7 9"/><path d="M13.5 12.5 15 10"/></svg>
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong style="color:var(--ink);">Galdhøpiggen &amp; Glittertind</strong> – Noregs to høgste fjelltoppar, begge innan rekkevidde for ein dagstur frå Lom.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong id="natur1-tittel" style="color:var(--ink);">Galdhøpiggen &amp; Glittertind</strong> – <span id="natur1-tekst">Noregs to høgste fjelltoppar, begge innan rekkevidde for ein dagstur frå Lom.</span></p>
         </div>
         <div style="display:flex;gap:16px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M4 18 18 6"/><path d="M6 20 20 8"/><circle cx="17" cy="7" r="1.4" fill="var(--forest-900)" stroke="none"/></svg>
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong style="color:var(--ink);">Besseggen &amp; sommarski</strong> – den klassiske Besseggen-turen, og sommarski på breen ved Juvasshytta.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong id="natur2-tittel" style="color:var(--ink);">Besseggen &amp; sommarski</strong> – <span id="natur2-tekst">den klassiske Besseggen-turen, og sommarski på breen ved Juvasshytta.</span></p>
         </div>
         <div style="display:flex;gap:16px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong style="color:var(--ink);">Bilturar til fjordane</strong> – kort veg til Geirangerfjorden og Sognefjorden i vest.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong id="natur3-tittel" style="color:var(--ink);">Bilturar til fjordane</strong> – <span id="natur3-tekst">kort veg til Geirangerfjorden og Sognefjorden i vest.</span></p>
         </div>
       </div>
     </div>
@@ -73,15 +73,15 @@
       <div style="display:flex;flex-direction:column;gap:20px;">
         <div style="display:flex;gap:16px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M12 2v3"/><path d="M9 5h6"/><path d="M6 22V11l6-4 6 4v11"/><path d="M6 22h12"/><path d="M12 22v-6"/></svg>
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong style="color:var(--ink);">Lomskyrkja</strong> – ei staseleg stavkyrkje midt i Lom sentrum.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong id="historie1-tittel" style="color:var(--ink);">Lomskyrkja</strong> – <span id="historie1-tekst">ei staseleg stavkyrkje midt i Lom sentrum.</span></p>
         </div>
         <div style="display:flex;gap:16px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M8 21v-6h8v6"/><path d="M3 9 12 3l9 6"/></svg>
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong style="color:var(--ink);">Norsk Fjellmuseum</strong> – utstillingar om norsk fjellnatur og friluftsliv.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong id="historie2-tittel" style="color:var(--ink);">Norsk Fjellmuseum</strong> – <span id="historie2-tekst">utstillingar om norsk fjellnatur og friluftsliv.</span></p>
         </div>
         <div style="display:flex;gap:16px;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg>
-          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong style="color:var(--ink);">Fossheim Steinsenter</strong> – utstillingar og butikk med mineral og bergartar frå heile landet.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.6;color:var(--ink-soft);"><strong id="historie3-tittel" style="color:var(--ink);">Fossheim Steinsenter</strong> – <span id="historie3-tekst">utstillingar og butikk med mineral og bergartar frå heile landet.</span></p>
         </div>
       </div>
     </div>
@@ -102,9 +102,9 @@
     <div>
       <div class="foot-h">Kontakt</div>
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <a class="foot-link" href="tel:61212250">61 21 22 50</a>
-        <a class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
-        <span class="foot-link">Lom sentrum, Noreg</span>
+        <a data-cms="telefon" class="foot-link" href="tel:61212250">61 21 22 50</a>
+        <a data-cms="epost" class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
+        <span data-cms="adresse" class="foot-link">Lom sentrum, Noreg</span>
       </div>
     </div>
     <div>
@@ -128,5 +128,6 @@
   </div>
 </div>
 
+<script src="assets/content.js" defer></script>
 </body>
 </html>

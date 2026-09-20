@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="konferanse">
 
 <div class="nav">
   <div class="nav-logo">
@@ -36,33 +36,33 @@
 </div>
 
 <div class="subhero">
-  <img src="assets/hotel-exterior-sm.jpg" alt="Fossberg Hotell">
+  <img id="hero-bilete" src="assets/hotel-exterior-sm.jpg" alt="Fossberg Hotell">
   <div class="overlay"></div>
   <div class="content">
     <div class="eyebrow" style="color:oklch(0.99 0.003 90 / 0.85);margin-bottom:12px;">Konferanse</div>
-    <h1 class="serif" style="margin:0;font-size:44px;color:var(--white);">Møte og samling midt i fjell-Noreg</h1>
+    <h1 id="hero-tittel" class="serif" style="margin:0;font-size:44px;color:var(--white);">Møte og samling midt i fjell-Noreg</h1>
   </div>
 </div>
 
 <div class="section">
   <div class="section-heading">
-    <p style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Fossberg har konferanselokale for møte, kurs og samlingar – med god mat frå kjøkkenet, trim- og trivselssenter for pausane, og fjella som næraste nabo.</p>
+    <p id="intro-tekst" style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Fossberg har konferanselokale for møte, kurs og samlingar – med god mat frå kjøkkenet, trim- og trivselssenter for pausane, og fjella som næraste nabo.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;">
     <div style="display:flex;flex-direction:column;gap:14px;">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c.8-3.6 3.4-5.6 6.5-5.6s5.7 2 6.5 5.6"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 14.6c2.5.2 4.4 2.1 5 5.4"/></svg>
-      <h3 class="card-title" style="font-size:21px;">Fleksible lokale</h3>
-      <p class="card-text">Møterom som kan tilpassast frå mindre grupper til større samlingar.</p>
+      <h3 id="punkt1-tittel" class="card-title" style="font-size:21px;">Fleksible lokale</h3>
+      <p id="punkt1-tekst" class="card-text">Møterom som kan tilpassast frå mindre grupper til større samlingar.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v8a2 2 0 0 0 4 0V2"/><path d="M8 10v12"/><path d="M17 2c-1.7 0-3 2-3 5s1.3 5 3 5v10"/></svg>
-      <h3 class="card-title" style="font-size:21px;">Full servering</h3>
-      <p class="card-text">Frukost, lunsj, middag og pausemat leverast av kafeteria og kjøkken på huset.</p>
+      <h3 id="punkt2-tittel" class="card-title" style="font-size:21px;">Full servering</h3>
+      <p id="punkt2-tekst" class="card-text">Frukost, lunsj, middag og pausemat leverast av kafeteria og kjøkken på huset.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--forest-900)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19 9 7l4 6 2-3 7 9"/><path d="M13.5 12.5 15 10"/></svg>
-      <h3 class="card-title" style="font-size:21px;">Overnatting inkludert</h3>
-      <p class="card-text">Kombiner møtet med overnatting i hotellrom eller hytte – alt på same stad.</p>
+      <h3 id="punkt3-tittel" class="card-title" style="font-size:21px;">Overnatting inkludert</h3>
+      <p id="punkt3-tekst" class="card-text">Kombiner møtet med overnatting i hotellrom eller hytte – alt på same stad.</p>
     </div>
   </div>
 </div>
@@ -86,9 +86,9 @@
     <div>
       <div class="foot-h">Kontakt</div>
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <a class="foot-link" href="tel:61212250">61 21 22 50</a>
-        <a class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
-        <span class="foot-link">Lom sentrum, Noreg</span>
+        <a data-cms="telefon" class="foot-link" href="tel:61212250">61 21 22 50</a>
+        <a data-cms="epost" class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
+        <span data-cms="adresse" class="foot-link">Lom sentrum, Noreg</span>
       </div>
     </div>
     <div>
@@ -112,5 +112,6 @@
   </div>
 </div>
 
+<script src="assets/content.js" defer></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="om_oss">
 
 <div class="nav">
   <div class="nav-logo">
@@ -36,17 +36,17 @@
 </div>
 
 <div class="subhero">
-  <img src="assets/hotel-exterior-sm.jpg" alt="Fossberg Hotell sin fasade">
+  <img id="hero-bilete" src="assets/hotel-exterior-sm.jpg" alt="Fossberg Hotell sin fasade">
   <div class="overlay"></div>
   <div class="content">
     <div class="eyebrow" style="color:oklch(0.99 0.003 90 / 0.85);margin-bottom:12px;">Om oss</div>
-    <h1 class="serif" style="margin:0;font-size:44px;color:var(--white);">Meir enn hundre år som vertskap i Lom</h1>
+    <h1 id="hero-tittel" class="serif" style="margin:0;font-size:44px;color:var(--white);">Meir enn hundre år som vertskap i Lom</h1>
   </div>
 </div>
 
 <div class="section">
   <div class="section-heading">
-    <p style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Fossberg Hotell har røter tilbake til før 1900, og har vore ein fast stoppestad for reisande gjennom Lom i over eit hundreår. Frå eit vesle gjestgiveri med sju soverom til dagens hotell – historia er prega av steg-for-steg-vekst, ikkje eit stort byks.</p>
+    <p id="intro-tekst" style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Fossberg Hotell har røter tilbake til før 1900, og har vore ein fast stoppestad for reisande gjennom Lom i over eit hundreår. Frå eit vesle gjestgiveri med sju soverom til dagens hotell – historia er prega av steg-for-steg-vekst, ikkje eit stort byks.</p>
   </div>
 
   <div class="timeline" id="timeline" style="max-width:760px;">
@@ -106,9 +106,9 @@
     <div>
       <div class="foot-h">Kontakt</div>
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <a class="foot-link" href="tel:61212250">61 21 22 50</a>
-        <a class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
-        <span class="foot-link">Lom sentrum, Noreg</span>
+        <a data-cms="telefon" class="foot-link" href="tel:61212250">61 21 22 50</a>
+        <a data-cms="epost" class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
+        <span data-cms="adresse" class="foot-link">Lom sentrum, Noreg</span>
       </div>
     </div>
     <div>

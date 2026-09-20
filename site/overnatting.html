@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="overnatting">
 
 <div class="nav">
   <div class="nav-logo">
@@ -36,41 +36,41 @@
 </div>
 
 <div class="subhero">
-  <img src="assets/hotel-exterior-sm.jpg" alt="Fossberg Hotell sin fasade">
+  <img id="hero-bilete" src="assets/hotel-exterior-sm.jpg" alt="Fossberg Hotell sin fasade">
   <div class="overlay"></div>
   <div class="content">
     <div class="eyebrow" style="color:oklch(0.99 0.003 90 / 0.85);margin-bottom:12px;">Overnatting</div>
-    <h1 class="serif" style="margin:0;font-size:44px;color:var(--white);">Rom, hytter og bobilplass i Lom sentrum</h1>
+    <h1 id="hero-tittel" class="serif" style="margin:0;font-size:44px;color:var(--white);">Rom, hytter og bobilplass i Lom sentrum</h1>
   </div>
 </div>
 
 <div class="section">
   <div class="section-heading">
-    <p style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Same om du kjem for ei natt på veg over fjellet eller for ei heil veke med toppturar – Fossberg har husrom som passar. Alt ligg samla, rett ved Bøvra og gangavstand til butikkar, kafear og Lomskyrkja.</p>
+    <p id="intro-tekst" style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Same om du kjem for ei natt på veg over fjellet eller for ei heil veke med toppturar – Fossberg har husrom som passar. Alt ligg samla, rett ved Bøvra og gangavstand til butikkar, kafear og Lomskyrkja.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;">
 
     <div class="card">
-      <img src="assets/hotel-exterior-sm.jpg" alt="Hotellrom" style="width:100%;height:200px;object-fit:cover;">
+      <img id="kort1-bilete" src="assets/hotel-exterior-sm.jpg" alt="Hotellrom" style="width:100%;height:200px;object-fit:cover;">
       <div style="padding:26px 24px 28px 24px;">
-        <h3 class="card-title" style="font-size:21px;">Hotellrom</h3>
-        <p class="card-text" style="font-size:15px;">Komfortable rom med eige bad, toalett og TV. Fleire rom har utsikt mot fjella eller elva.</p>
+        <h3 id="kort1-tittel" class="card-title" style="font-size:21px;">Hotellrom</h3>
+        <p id="kort1-tekst" class="card-text" style="font-size:15px;">Komfortable rom med eige bad, toalett og TV. Fleire rom har utsikt mot fjella eller elva.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="assets/hero-terrace-sm.jpg" alt="Motellrom" style="width:100%;height:200px;object-fit:cover;">
+      <img id="kort2-bilete" src="assets/hero-terrace-sm.jpg" alt="Motellrom" style="width:100%;height:200px;object-fit:cover;">
       <div style="padding:26px 24px 28px 24px;">
-        <h3 class="card-title" style="font-size:21px;">Motell &amp; hytter</h3>
-        <p class="card-text" style="font-size:15px;">Enkle og rimelege motellrom, og koselege hytter og leilegheiter for familien eller gjengen.</p>
+        <h3 id="kort2-tittel" class="card-title" style="font-size:21px;">Motell &amp; hytter</h3>
+        <p id="kort2-tekst" class="card-text" style="font-size:15px;">Enkle og rimelege motellrom, og koselege hytter og leilegheiter for familien eller gjengen.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="assets/lom-street-sm.jpg" alt="Bobilplass i Lom sentrum" style="width:100%;height:200px;object-fit:cover;">
+      <img id="kort3-bilete" src="assets/lom-street-sm.jpg" alt="Bobilplass i Lom sentrum" style="width:100%;height:200px;object-fit:cover;">
       <div style="padding:26px 24px 28px 24px;">
-        <h3 class="card-title" style="font-size:21px;">Bobilplass</h3>
-        <p class="card-text" style="font-size:15px;">Bobilplassar med straumtilkopling rett i sentrum av Lom, med ladestasjon for el-bil like ved.</p>
+        <h3 id="kort3-tittel" class="card-title" style="font-size:21px;">Bobilplass</h3>
+        <p id="kort3-tekst" class="card-text" style="font-size:15px;">Bobilplassar med straumtilkopling rett i sentrum av Lom, med ladestasjon for el-bil like ved.</p>
       </div>
     </div>
 
@@ -96,9 +96,9 @@
     <div>
       <div class="foot-h">Kontakt</div>
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <a class="foot-link" href="tel:61212250">61 21 22 50</a>
-        <a class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
-        <span class="foot-link">Lom sentrum, Noreg</span>
+        <a data-cms="telefon" class="foot-link" href="tel:61212250">61 21 22 50</a>
+        <a data-cms="epost" class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
+        <span data-cms="adresse" class="foot-link">Lom sentrum, Noreg</span>
       </div>
     </div>
     <div>
@@ -122,5 +122,6 @@
   </div>
 </div>
 
+<script src="assets/content.js" defer></script>
 </body>
 </html>

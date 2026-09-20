@@ -8,6 +8,121 @@ media_folder: "site/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+  - name: "innhald"
+    label: "Innhald på sidene"
+    files:
+      - file: "site/data/content.json"
+        label: "Tekst og bilete"
+        name: "innhald"
+        fields:
+          - label: "Kontaktinfo (vises i footer på alle sider)"
+            name: "kontakt_info"
+            widget: "object"
+            fields:
+              - { label: "Telefon", name: "telefon", widget: "string" }
+              - { label: "E-post", name: "epost", widget: "string" }
+              - { label: "Adresse", name: "adresse", widget: "string" }
+
+          - label: "Forside"
+            name: "forside"
+            widget: "object"
+            fields:
+              - { label: "Merkelapp over tittel", name: "hero_eyebrow", widget: "string" }
+              - { label: "Hovudtittel", name: "hero_tittel", widget: "string" }
+              - { label: "Ingress", name: "hero_tekst", widget: "text" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+              - { label: "Kort 1 – tittel", name: "kort1_tittel", widget: "string" }
+              - { label: "Kort 1 – tekst", name: "kort1_tekst", widget: "text" }
+              - { label: "Kort 1 – bilete", name: "kort1_bilete", widget: "image" }
+              - { label: "Kort 2 – tittel", name: "kort2_tittel", widget: "string" }
+              - { label: "Kort 2 – tekst", name: "kort2_tekst", widget: "text" }
+              - { label: "Kort 2 – bilete", name: "kort2_bilete", widget: "image" }
+              - { label: "Kort 3 – tittel", name: "kort3_tittel", widget: "string" }
+              - { label: "Kort 3 – tekst", name: "kort3_tekst", widget: "text" }
+              - { label: "Kort 3 – bilete", name: "kort3_bilete", widget: "image" }
+
+          - label: "Overnatting"
+            name: "overnatting"
+            widget: "object"
+            fields:
+              - { label: "Tittel", name: "hero_tittel", widget: "string" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+              - { label: "Ingress", name: "intro", widget: "text" }
+              - { label: "Kort 1 – tittel", name: "kort1_tittel", widget: "string" }
+              - { label: "Kort 1 – tekst", name: "kort1_tekst", widget: "text" }
+              - { label: "Kort 1 – bilete", name: "kort1_bilete", widget: "image" }
+              - { label: "Kort 2 – tittel", name: "kort2_tittel", widget: "string" }
+              - { label: "Kort 2 – tekst", name: "kort2_tekst", widget: "text" }
+              - { label: "Kort 2 – bilete", name: "kort2_bilete", widget: "image" }
+              - { label: "Kort 3 – tittel", name: "kort3_tittel", widget: "string" }
+              - { label: "Kort 3 – tekst", name: "kort3_tekst", widget: "text" }
+              - { label: "Kort 3 – bilete", name: "kort3_bilete", widget: "image" }
+
+          - label: "Trim & trivsel"
+            name: "trim"
+            widget: "object"
+            fields:
+              - { label: "Tittel", name: "hero_tittel", widget: "string" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+              - { label: "Ingress", name: "intro", widget: "text" }
+              - { label: "Kort 1 – tittel", name: "kort1_tittel", widget: "string" }
+              - { label: "Kort 1 – tekst", name: "kort1_tekst", widget: "text" }
+              - { label: "Kort 1 – bilete", name: "kort1_bilete", widget: "image" }
+              - { label: "Kort 2 – tittel", name: "kort2_tittel", widget: "string" }
+              - { label: "Kort 2 – tekst", name: "kort2_tekst", widget: "text" }
+              - { label: "Kort 2 – bilete", name: "kort2_bilete", widget: "image" }
+              - { label: "Treningsrom – tittel", name: "treningsrom_tittel", widget: "string" }
+              - { label: "Treningsrom – tekst", name: "treningsrom_tekst", widget: "text" }
+
+          - label: "Konferanse"
+            name: "konferanse"
+            widget: "object"
+            fields:
+              - { label: "Tittel", name: "hero_tittel", widget: "string" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+              - { label: "Ingress", name: "intro", widget: "text" }
+              - { label: "Punkt 1 – tittel", name: "punkt1_tittel", widget: "string" }
+              - { label: "Punkt 1 – tekst", name: "punkt1_tekst", widget: "text" }
+              - { label: "Punkt 2 – tittel", name: "punkt2_tittel", widget: "string" }
+              - { label: "Punkt 2 – tekst", name: "punkt2_tekst", widget: "text" }
+              - { label: "Punkt 3 – tittel", name: "punkt3_tittel", widget: "string" }
+              - { label: "Punkt 3 – tekst", name: "punkt3_tekst", widget: "text" }
+
+          - label: "Lom"
+            name: "lom"
+            widget: "object"
+            fields:
+              - { label: "Tittel", name: "hero_tittel", widget: "string" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+              - { label: "Ingress", name: "intro", widget: "text" }
+              - { label: "Ute i naturen 1 – tittel", name: "natur1_tittel", widget: "string" }
+              - { label: "Ute i naturen 1 – tekst", name: "natur1_tekst", widget: "text" }
+              - { label: "Ute i naturen 2 – tittel", name: "natur2_tittel", widget: "string" }
+              - { label: "Ute i naturen 2 – tekst", name: "natur2_tekst", widget: "text" }
+              - { label: "Ute i naturen 3 – tittel", name: "natur3_tittel", widget: "string" }
+              - { label: "Ute i naturen 3 – tekst", name: "natur3_tekst", widget: "text" }
+              - { label: "Kultur & historie 1 – tittel", name: "historie1_tittel", widget: "string" }
+              - { label: "Kultur & historie 1 – tekst", name: "historie1_tekst", widget: "text" }
+              - { label: "Kultur & historie 2 – tittel", name: "historie2_tittel", widget: "string" }
+              - { label: "Kultur & historie 2 – tekst", name: "historie2_tekst", widget: "text" }
+              - { label: "Kultur & historie 3 – tittel", name: "historie3_tittel", widget: "string" }
+              - { label: "Kultur & historie 3 – tekst", name: "historie3_tekst", widget: "text" }
+
+          - label: "Kontakt"
+            name: "kontakt"
+            widget: "object"
+            fields:
+              - { label: "Tittel", name: "hero_tittel", widget: "string" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+
+          - label: "Om oss"
+            name: "om_oss"
+            widget: "object"
+            fields:
+              - { label: "Tittel", name: "hero_tittel", widget: "string" }
+              - { label: "Bakgrunnsbilete", name: "hero_bilete", widget: "image" }
+              - { label: "Ingress", name: "intro", widget: "text" }
+
   - name: "om_oss"
     label: "Om oss – historie"
     files:

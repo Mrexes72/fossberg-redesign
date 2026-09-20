@@ -1,0 +1,86 @@
+{
+  "kontakt_info": {
+    "telefon": "61 21 22 50",
+    "epost": "booking@fossberg.no",
+    "adresse": "Lom sentrum, Noreg"
+  },
+  "forside": {
+    "hero_eyebrow": "Lom sentrum · Gudbrandsdalen",
+    "hero_tittel": "Der Bøvra renn kvit og vill gjennom Prestfossen.",
+    "hero_tekst": "Fossberg Hotell ligg midt i hjarta av Lom – komfortable rom, hytter og bobilplassar, god mat i kafeteria og spisesal, og eit trim- og trivselssenter med basseng rett ved elva.",
+    "hero_bilete": "assets/hero-terrace-sm.jpg",
+    "kort1_tittel": "Rom, hytter og bobilplass",
+    "kort1_tekst": "Komfortable hotellrom med dusj, toalett og TV, koselege hytter og leilegheiter, og bobilplassar – rett i hjarta av Lom sentrum.",
+    "kort1_bilete": "assets/hotel-exterior-sm.jpg",
+    "kort2_tittel": "Trim, symjing og kvile",
+    "kort2_tekst": "Innandørs basseng for store og små, badstove og treningsrom med godt utstyr.",
+    "kort2_bilete": "assets/pool-sm.jpg",
+    "kort3_tittel": "Fjell, fjord og folkeliv",
+    "kort3_tekst": "Lom ligg midt mellom Oslo, Bergen og Trondheim – kort veg til Galdhøpiggen, Glittertind, Besseggen og fjordane i vest.",
+    "kort3_bilete": "assets/lom-street-sm.jpg"
+  },
+  "overnatting": {
+    "hero_tittel": "Rom, hytter og bobilplass i Lom sentrum",
+    "hero_bilete": "assets/hotel-exterior-sm.jpg",
+    "intro": "Same om du kjem for ei natt på veg over fjellet eller for ei heil veke med toppturar – Fossberg har husrom som passar. Alt ligg samla, rett ved Bøvra og gangavstand til butikkar, kafear og Lomskyrkja.",
+    "kort1_tittel": "Hotellrom",
+    "kort1_tekst": "Komfortable rom med eige bad, toalett og TV. Fleire rom har utsikt mot fjella eller elva.",
+    "kort1_bilete": "assets/hotel-exterior-sm.jpg",
+    "kort2_tittel": "Motell & hytter",
+    "kort2_tekst": "Enkle og rimelege motellrom, og koselege hytter og leilegheiter for familien eller gjengen.",
+    "kort2_bilete": "assets/hero-terrace-sm.jpg",
+    "kort3_tittel": "Bobilplass",
+    "kort3_tekst": "Bobilplassar med straumtilkopling rett i sentrum av Lom, med ladestasjon for el-bil like ved.",
+    "kort3_bilete": "assets/lom-street-sm.jpg"
+  },
+  "trim": {
+    "hero_tittel": "Symjing, badstove og trening rett ved elva",
+    "hero_bilete": "assets/pool-sm.jpg",
+    "intro": "Fossberg sitt trim- og trivselssenter er ope for både gjester og lokalbefolkning – ein god måte å kvile beina etter ein fjelltur, eller halde forma vedlike medan du er på ferie.",
+    "kort1_tittel": "Symjebasseng",
+    "kort1_tekst": "Innandørs basseng for både store og små, med eige barnebasseng. Fint for eit friskt tak etter ein lang køyretur eller fjelltur.",
+    "kort1_bilete": "assets/pool-sm.jpg",
+    "kort2_tittel": "Badstove & kvile",
+    "kort2_tekst": "Varm badstove med plass til å kvile ut etter symjing eller ein treningsøkt.",
+    "kort2_bilete": "assets/hotel-exterior-sm.jpg",
+    "treningsrom_tittel": "Treningsrom",
+    "treningsrom_tekst": "Godt utstyrt treningsrom med apparat for styrke og kondisjon."
+  },
+  "konferanse": {
+    "hero_tittel": "Møte og samling midt i fjell-Noreg",
+    "hero_bilete": "assets/hotel-exterior-sm.jpg",
+    "intro": "Fossberg har konferanselokale for møte, kurs og samlingar – med god mat frå kjøkkenet, trim- og trivselssenter for pausane, og fjella som næraste nabo.",
+    "punkt1_tittel": "Fleksible lokale",
+    "punkt1_tekst": "Møterom som kan tilpassast frå mindre grupper til større samlingar.",
+    "punkt2_tittel": "Full servering",
+    "punkt2_tekst": "Frukost, lunsj, middag og pausemat leverast av kafeteria og kjøkken på huset.",
+    "punkt3_tittel": "Overnatting inkludert",
+    "punkt3_tekst": "Kombiner møtet med overnatting i hotellrom eller hytte – alt på same stad."
+  },
+  "lom": {
+    "hero_tittel": "Startpunktet for fjell-Noreg",
+    "hero_bilete": "assets/lom-street-sm.jpg",
+    "intro": "Lom ligg midt mellom Oslo, Bergen og Trondheim, og er eit av dei beste utgangspunkta for å oppleve både fjell-Noreg og Vestlandet – på kort avstand til fjelltoppar, brear og fjordar.",
+    "natur1_tittel": "Galdhøpiggen & Glittertind",
+    "natur1_tekst": "Noregs to høgste fjelltoppar, begge innan rekkevidde for ein dagstur frå Lom.",
+    "natur2_tittel": "Besseggen & sommarski",
+    "natur2_tekst": "Den klassiske Besseggen-turen, og sommarski på breen ved Juvasshytta.",
+    "natur3_tittel": "Bilturar til fjordane",
+    "natur3_tekst": "Kort veg til Geirangerfjorden og Sognefjorden i vest.",
+    "historie1_tittel": "Lomskyrkja",
+    "historie1_tekst": "Ei staseleg stavkyrkje midt i Lom sentrum.",
+    "historie2_tittel": "Norsk Fjellmuseum",
+    "historie2_tekst": "Utstillingar om norsk fjellnatur og friluftsliv.",
+    "historie3_tittel": "Fossheim Steinsenter",
+    "historie3_tekst": "Utstillingar og butikk med mineral og bergartar frå heile landet."
+  },
+  "kontakt": {
+    "hero_tittel": "Ta kontakt med oss",
+    "hero_bilete": "assets/hero-terrace-sm.jpg"
+  },
+  "om_oss": {
+    "hero_tittel": "Meir enn hundre år som vertskap i Lom",
+    "hero_bilete": "assets/hotel-exterior-sm.jpg",
+    "intro": "Fossberg Hotell har røter tilbake til før 1900, og har vore ein fast stoppestad for reisande gjennom Lom i over eit hundreår. Frå eit vesle gjestgiveri med sju soverom til dagens hotell – historia er prega av steg-for-steg-vekst, ikkje eit stort byks."
+  }
+}
