@@ -4,14 +4,14 @@ backend:
 
 publish_mode: simple
 
-media_folder: "assets/uploads"
+media_folder: "site/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
   - name: "om_oss"
     label: "Om oss – historie"
     files:
-      - file: "data/om-oss.json"
+      - file: "site/data/om-oss.json"
         label: "Historie-tidslinje"
         name: "om_oss"
         fields:
