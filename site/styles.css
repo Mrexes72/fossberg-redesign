@@ -69,11 +69,12 @@ a:hover{color:var(--forest-900);}
 .foot-link:hover{color:var(--white);}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;}
 
-/* Contact form (visual only) */
+/* Contact form (submits via Netlify Forms) */
 .field{display:flex;flex-direction:column;gap:8px;}
 .field label{font-family:Manrope,sans-serif;font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.02em;}
 .field input,.field textarea{font-family:Manrope,sans-serif;font-size:15px;padding:13px 14px;border:1px solid var(--line);border-radius:3px;background:var(--white);color:var(--ink);}
 .field input:focus,.field textarea:focus{outline:2px solid var(--forest);outline-offset:1px;}
+.hp-field{position:absolute;left:-5000px;}
 
 /* Mobile nav (checkbox-driven, no JS) */
 .menu-toggle{display:none;}

@@ -26,6 +26,15 @@ Push til `main` oppdaterer begge automatisk. Repoet har òg ein auto-commit/push
 - Bilete lastar opp til `site/assets/uploads/` via CMS-et sitt innebygde media-bibliotek.
 - Guide til redaktøren (kva ho ser, korleis Publish fungerer): https://claude.ai/code/artifact/343091d9-c5c6-41ab-bdfd-a7b41c4afce7
 
+## Kontaktskjema (Netlify Forms)
+
+`site/kontakt.html` har to skjema som sender via [Netlify Forms](https://docs.netlify.com/manage/forms/setup/) — ingen backend-kode, Netlify oppdagar dei automatisk frå `data-netlify="true"` i den statiske HTML-en ved deploy:
+
+- `generelt-sporsmal` — vanlege spørsmål som ikkje er svart på i sida.
+- `konferanse-forespurnad` — førespurnad om møte/konferanse (dato, tal på deltakarar, formål).
+
+Begge har ein skjult honeypot-feil (`bot-field`, styla usynleg via `.hp-field` i `styles.css`) for spam-filtrering, og sender brukaren vidare til `site/takk.html` ved vellukka innsending. Reine **romreservasjonar skal ikkje gå via desse skjemaa** — sida peikar i staden til Bedify-booking (same lenke som «Book opphald»-knappane elles på sida). Innsende skjema hamnar i Netlify sitt Forms-panel for nettstaden (sjå Netlify-dashbordet under "Forms") — set opp e-postvarsling der om det er ønskeleg. Fungerer berre etter deploy til Netlify, ikkje ved lokal filvisning.
+
 ## Personar
 
 - **Per** (repo-eigar, `git@github.com:Mrexes72/fossberg-redesign.git`) gjer kode-/designendringar.

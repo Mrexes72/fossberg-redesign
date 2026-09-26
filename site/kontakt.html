@@ -45,6 +45,9 @@
 </div>
 
 <div class="section" id="skjema">
+  <div class="section-heading">
+    <p style="margin:0;font-size:17px;line-height:1.7;color:var(--ink-soft);max-width:680px;">Har du eit spørsmål vi ikkje har svara på her på sida, eller skal de ha eit møte eller ein konferanse hos oss? Bruk skjemaa under. <strong style="color:var(--ink);">Skal du bestille rom, hytte eller bobilplass, bruk «Book opphald» øvst på sida</strong> – vi tek ikkje imot romreservasjonar via kontaktskjemaet.</p>
+  </div>
   <div class="grid-split" style="gap:64px;">
 
     <div>
@@ -64,39 +67,71 @@
         </span>
       </div>
       <div style="margin-top:40px;padding:24px;background:var(--paper-2);border-radius:4px;">
-        <p style="margin:0;font-size:14px;line-height:1.6;color:var(--ink-soft);">Dette skjemaet er ein del av designutkastet og sender ikkje inn noko enno – det syner korleis ei booking-/kontaktside kan sjå ut.</p>
+        <p style="margin:0 0 14px 0;font-size:14px;line-height:1.6;color:var(--ink-soft);">Skal du bestille opphald? Book direkte hos oss for raskaste svar på ledig kapasitet og pris.</p>
+        <a class="btn btn-primary" href="https://booking.bedify.net/67fe241c0396bf51b50c3747/682725ea008c22234bec86dc" target="_blank" style="border:none;">Book opphald</a>
       </div>
     </div>
 
-    <div>
-      <h2 class="serif" style="margin:0 0 24px 0;font-size:28px;color:var(--ink);">Send oss ei melding</h2>
-      <form style="display:flex;flex-direction:column;gap:20px;" onsubmit="return false;">
-        <div class="grid-2" style="gap:20px;">
-          <div class="field">
-            <label for="namn">Namn</label>
-            <input id="namn" type="text" placeholder="Ola Nordmann">
+    <div style="display:flex;flex-direction:column;gap:48px;">
+
+      <div>
+        <h2 class="serif" style="margin:0 0 8px 0;font-size:28px;color:var(--ink);">Generelt spørsmål</h2>
+        <p style="margin:0 0 20px 0;font-size:15px;line-height:1.6;color:var(--ink-soft);">For alt du lurer på som ikkje handlar om å bestille opphald.</p>
+        <form name="generelt-sporsmal" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk.html" style="display:flex;flex-direction:column;gap:20px;">
+          <input type="hidden" name="form-name" value="generelt-sporsmal">
+          <p class="hp-field"><label>Ikkje fyll ut dette feltet om du er eit menneske: <input name="bot-field"></label></p>
+          <div class="grid-2" style="gap:20px;">
+            <div class="field">
+              <label for="q-namn">Namn</label>
+              <input id="q-namn" name="namn" type="text" required placeholder="Ola Nordmann">
+            </div>
+            <div class="field">
+              <label for="q-epost">E-post</label>
+              <input id="q-epost" name="epost" type="email" required placeholder="ola@epost.no">
+            </div>
           </div>
           <div class="field">
-            <label for="epost">E-post</label>
-            <input id="epost" type="email" placeholder="ola@epost.no">
+            <label for="q-melding">Melding</label>
+            <textarea id="q-melding" name="melding" rows="4" required placeholder="Kva lurer du på?"></textarea>
           </div>
-        </div>
-        <div class="grid-2" style="gap:20px;">
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;border:none;">Send spørsmål</button>
+        </form>
+      </div>
+
+      <div style="padding-top:40px;border-top:1px solid var(--line);">
+        <h2 class="serif" style="margin:0 0 8px 0;font-size:28px;color:var(--ink);">Bestill møte eller konferanse</h2>
+        <p style="margin:0 0 20px 0;font-size:15px;line-height:1.6;color:var(--ink-soft);">Fortel oss om møtet eller konferansen, så tek vi kontakt for å avtale detaljar.</p>
+        <form name="konferanse-forespurnad" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk.html" style="display:flex;flex-direction:column;gap:20px;">
+          <input type="hidden" name="form-name" value="konferanse-forespurnad">
+          <p class="hp-field"><label>Ikkje fyll ut dette feltet om du er eit menneske: <input name="bot-field"></label></p>
+          <div class="grid-2" style="gap:20px;">
+            <div class="field">
+              <label for="k-namn">Namn</label>
+              <input id="k-namn" name="namn" type="text" required placeholder="Ola Nordmann">
+            </div>
+            <div class="field">
+              <label for="k-epost">E-post</label>
+              <input id="k-epost" name="epost" type="email" required placeholder="ola@epost.no">
+            </div>
+          </div>
+          <div class="grid-2" style="gap:20px;">
+            <div class="field">
+              <label for="k-dato">Ønska dato</label>
+              <input id="k-dato" name="dato" type="date">
+            </div>
+            <div class="field">
+              <label for="k-deltakarar">Tal på deltakarar</label>
+              <input id="k-deltakarar" name="deltakarar" type="number" min="1" placeholder="12">
+            </div>
+          </div>
           <div class="field">
-            <label for="innsjekk">Innsjekk</label>
-            <input id="innsjekk" type="date">
+            <label for="k-melding">Fortel oss om møtet</label>
+            <textarea id="k-melding" name="melding" rows="4" placeholder="Formål, ønska tidsrom, behov for mat eller utstyr …"></textarea>
           </div>
-          <div class="field">
-            <label for="utsjekk">Utsjekk</label>
-            <input id="utsjekk" type="date">
-          </div>
-        </div>
-        <div class="field">
-          <label for="melding">Melding</label>
-          <textarea id="melding" rows="5" placeholder="Fortel oss kva du treng – tal på gjester, romtype, spesielle ønske …"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="align-self:flex-start;border:none;">Send melding</button>
-      </form>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;border:none;">Send førespurnad</button>
+        </form>
+      </div>
+
     </div>
 
   </div>
@@ -111,9 +146,9 @@
     <div>
       <div class="foot-h">Kontakt</div>
       <div style="display:flex;flex-direction:column;gap:14px;">
-        <a class="foot-link" href="tel:61212250">61 21 22 50</a>
-        <a class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
-        <span class="foot-link">Lom sentrum, Noreg</span>
+        <a data-cms="telefon" class="foot-link" href="tel:61212250">61 21 22 50</a>
+        <a data-cms="epost" class="foot-link" href="mailto:booking@fossberg.no">booking@fossberg.no</a>
+        <span data-cms="adresse" class="foot-link">Lom sentrum, Noreg</span>
       </div>
     </div>
     <div>
