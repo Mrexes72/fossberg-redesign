@@ -94,6 +94,12 @@ a:hover{color:var(--forest-900);}
 .timeline-text h3{margin:0 0 8px 0;font-family:"DM Serif Display",Georgia,serif;font-size:20px;color:var(--ink);}
 .timeline-text p{margin:0;font-size:15.5px;line-height:1.65;color:var(--ink-soft);}
 
+/* Reusable content grids (cards, quick facts, form rows) */
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}
+.grid-split{display:grid;grid-template-columns:1fr 1.2fr;}
+
 @media (max-width: 900px){
   .timeline-item{grid-template-columns:76px 20px 1fr;gap:0 16px;}
   .timeline-year{font-size:18px;}
@@ -103,4 +109,14 @@ a:hover{color:var(--forest-900);}
   .btn-primary.nav-cta{order:1;padding:10px 18px;font-size:12px;}
   .wrap,.section,.section-tight,.footer,.subhero .content{padding-left:24px;padding-right:24px;}
   .foot-grid{grid-template-columns:1fr 1fr;}
+  .grid-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .grid-split{grid-template-columns:1fr;}
+}
+
+@media (max-width: 640px){
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
+  .subhero{height:280px;}
+  .hero-content{padding-left:24px !important;padding-right:24px !important;}
+  #hero-tittel{font-size:32px !important;}
+  .foot-grid{grid-template-columns:1fr;gap:40px;}
 }
