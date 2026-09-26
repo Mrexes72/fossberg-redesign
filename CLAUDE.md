@@ -5,7 +5,6 @@ Uoffisielt visuelt konsept for [Fossberg Hotell](https://fossberg.no) i Lom. Sj�
 ## Struktur
 
 - `/site` er det som faktisk vert publisert — vanleg HTML/CSS/JS, ingen byggeprosess, ingen rammeverk.
-- Repo-rota har i tillegg eldre kjeldefiler for det opphavlege visuelle utkastet (`Main.dc.html`, `Mobil.dc.html`, `canvas.json`, `fossberg-nyutkast.html`) — desse vert **ikkje** publisert og treng normalt ikkje rørast.
 
 ## Publisering (to parallelle mål — begge er live)
 

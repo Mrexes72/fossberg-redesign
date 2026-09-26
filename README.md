@@ -11,8 +11,6 @@ Eit uoffisielt konsept for ei modernisert nettside for [Fossberg Hotell](https:/
   - `overnatting.html`, `trim-og-trivsel.html`, `konferanse.html`, `lom.html`, `kontakt.html` — undersider
   - `styles.css` — delt stilark for heile sida
   - `assets/` — bilete henta frå den eksisterande nettsida
-- **`Main.dc.html`, `Mobil.dc.html`, `canvas.json`** — kjeldefiler for det opphavlege visuelle utkastet (skrivebord + mobil), brukt til å generere `fossberg-nyutkast.html`
-- **`fossberg-nyutkast.html`** — ein sjølvstendig HTML-fil med eit lite redigeringsverktøy for å justere det visuelle utkastet
 
 ## Status
 
