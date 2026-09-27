@@ -35,6 +35,20 @@ Push til `main` oppdaterer begge automatisk. Repoet har òg ein auto-commit/push
 
 Begge har ein skjult honeypot-feil (`bot-field`, styla usynleg via `.hp-field` i `styles.css`) for spam-filtrering, og sender brukaren vidare til `site/takk.html` ved vellukka innsending. Reine **romreservasjonar skal ikkje gå via desse skjemaa** — sida peikar i staden til Bedify-booking (same lenke som «Book opphald»-knappane elles på sida). Innsende skjema hamnar i Netlify sitt Forms-panel for nettstaden (sjå Netlify-dashbordet under "Forms") — set opp e-postvarsling der om det er ønskeleg. Fungerer berre etter deploy til Netlify, ikkje ved lokal filvisning.
 
+## Designutkast (midlertidig — fjern når eit design er valt)
+
+`site/design-oversikt.html` er ei intern, ikkje-lenka side for å samanlikne tre visuelle retningar på **same** HTML/funksjonalitet, før eit endeleg design vert valt:
+
+- **A · Skog** — standarden (forest-green, DM Serif Display + Manrope).
+- **B · Varme fjell** — terrakotta/rust, Fraunces + Manrope.
+- **C · Fjord** — kjølig blå-grå, Space Grotesk + Manrope.
+
+**Korleis det verkar:** kvar side har eit `[data-theme="b"|"c"]`-attributt-basert palett/font-sett i `styles.css` (sjå `:root` og dei to `[data-theme=...]`-blokkene). Ein liten synkron `<script>` i `<head>` på kvar side les valet frå `localStorage`-nøkkelen `fossberg-design` og set attributtet på `<html>` før sida vert måla, slik at det ikkje "blinkar" til standarddesignet først. `content.js` viser ein liten badge nedst til høgre ("Visar design B/C") med ei lenke for å nullstille.
+
+**Viktig:** dette er **per nettlesar** (localStorage), ikkje ei global innstilling — vanlege besøkande ser alltid standarddesignet (A) uansett kva som er valt i `design-oversikt.html` i éin bestemt nettlesar. Alle design deler same `content.json`/CMS-innhald og same Netlify Forms-skjema.
+
+**Når eit design er valt:** fjern dei to ubrukte `[data-theme=...]`-blokkene i `styles.css`, dei ekstra Google Fonts-familiane frå `<head>` på kvar side (behald berre den valde overskriftsfonten + Manrope), den vesle theme-scriptet i `<head>` på kvar side, badge-logikken øvst i `content.js`, og `design-oversikt.html`.
+
 ## Personar
 
 - **Per** (repo-eigar, `git@github.com:Mrexes72/fossberg-redesign.git`) gjer kode-/designendringar.

@@ -6,20 +6,53 @@
   --ink-faint:oklch(0.60 0.015 260);
   --forest:oklch(0.42 0.075 155);
   --forest-900:oklch(0.24 0.05 155);
+  --forest-900-hover:oklch(0.20 0.045 155);
   --glacier:oklch(0.55 0.075 220);
   --line:oklch(0.85 0.012 80);
   --white:oklch(0.99 0.003 90);
+  --font-serif:"DM Serif Display",Georgia,serif;
+  --font-sans:Manrope,"Segoe UI",system-ui,sans-serif;
+}
+
+/* Design B — "Varme fjell": terrakotta/rust mot varm krem */
+[data-theme="b"]{
+  --paper:oklch(0.96 0.018 70);
+  --paper-2:oklch(0.915 0.024 65);
+  --ink:oklch(0.24 0.03 45);
+  --ink-soft:oklch(0.45 0.03 45);
+  --ink-faint:oklch(0.60 0.025 45);
+  --forest:oklch(0.50 0.13 40);
+  --forest-900:oklch(0.32 0.11 35);
+  --forest-900-hover:oklch(0.27 0.10 35);
+  --glacier:oklch(0.62 0.10 80);
+  --line:oklch(0.84 0.025 65);
+  --font-serif:"Fraunces",Georgia,serif;
+}
+
+/* Design C — "Fjord": kjølig bla-gra og moderne geometrisk overskriftsfont */
+[data-theme="c"]{
+  --paper:oklch(0.965 0.006 235);
+  --paper-2:oklch(0.92 0.012 235);
+  --ink:oklch(0.20 0.03 255);
+  --ink-soft:oklch(0.42 0.03 255);
+  --ink-faint:oklch(0.58 0.02 255);
+  --forest:oklch(0.42 0.10 235);
+  --forest-900:oklch(0.24 0.08 240);
+  --forest-900-hover:oklch(0.20 0.07 240);
+  --glacier:oklch(0.68 0.09 205);
+  --line:oklch(0.86 0.012 235);
+  --font-serif:"Space Grotesk","Segoe UI",sans-serif;
 }
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{margin:0;background:var(--paper);font-family:Manrope,"Segoe UI",system-ui,sans-serif;color:var(--ink);}
+body{margin:0;background:var(--paper);font-family:var(--font-sans);color:var(--ink);}
 img{max-width:100%;display:block;}
 a{color:var(--forest);text-decoration:none;}
 a:hover{color:var(--forest-900);}
 
-.serif{font-family:"DM Serif Display",Georgia,serif;}
-.sans{font-family:Manrope,"Segoe UI",system-ui,sans-serif;}
+.serif{font-family:var(--font-serif);}
+.sans{font-family:var(--font-sans);}
 .eyebrow{font-family:Manrope,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
 
 .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
@@ -27,7 +60,7 @@ a:hover{color:var(--forest-900);}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:9px;font-family:Manrope,sans-serif;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:16px 30px;border-radius:3px;cursor:pointer;white-space:nowrap;border:1px solid transparent;}
 .btn-primary{background:var(--forest-900);color:var(--white);border-color:var(--forest-900);}
-.btn-primary:hover{background:oklch(0.20 0.045 155);color:var(--white);}
+.btn-primary:hover{background:var(--forest-900-hover);color:var(--white);}
 .btn-ghost-dark{background:transparent;color:var(--white);border:1px solid oklch(0.99 0.003 90 / 0.55);}
 .btn-ghost-dark:hover{background:oklch(0.99 0.003 90 / 0.1);color:var(--white);}
 .btn-ghost-light{background:transparent;color:var(--forest-900);border:1px solid var(--forest-900);}
@@ -45,7 +78,7 @@ a:hover{color:var(--forest-900);}
 
 /* Cards */
 .card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
-.card-title{font-family:"DM Serif Display",Georgia,serif;font-size:24px;color:var(--ink);margin:0 0 10px 0;}
+.card-title{font-family:var(--font-serif);font-size:24px;color:var(--ink);margin:0 0 10px 0;}
 .card-text{font-family:Manrope,sans-serif;font-size:15.5px;line-height:1.65;color:var(--ink-soft);margin:0 0 18px 0;}
 .card-link{font-family:Manrope,sans-serif;font-size:14px;font-weight:700;color:var(--forest-900);display:inline-flex;align-items:center;gap:6px;}
 .fact{font-family:Manrope,sans-serif;font-size:14.5px;font-weight:600;color:var(--ink);}
@@ -87,12 +120,12 @@ a:hover{color:var(--forest-900);}
 /* History timeline */
 .timeline-item{display:grid;grid-template-columns:104px 24px 1fr;gap:0 28px;padding-bottom:44px;}
 .timeline-item:last-child{padding-bottom:0;}
-.timeline-year{font-family:"DM Serif Display",Georgia,serif;font-size:22px;color:var(--forest-900);padding-top:2px;}
+.timeline-year{font-family:var(--font-serif);font-size:22px;color:var(--forest-900);padding-top:2px;}
 .timeline-marker{display:flex;flex-direction:column;align-items:center;}
 .timeline-dot{width:12px;height:12px;border-radius:50%;background:var(--forest-900);flex-shrink:0;margin-top:8px;}
 .timeline-line{flex:1;width:1px;background:var(--line);margin-top:4px;}
 .timeline-item:last-child .timeline-line{display:none;}
-.timeline-text h3{margin:0 0 8px 0;font-family:"DM Serif Display",Georgia,serif;font-size:20px;color:var(--ink);}
+.timeline-text h3{margin:0 0 8px 0;font-family:var(--font-serif);font-size:20px;color:var(--ink);}
 .timeline-text p{margin:0;font-size:15.5px;line-height:1.65;color:var(--ink-soft);}
 
 /* Reusable content grids (cards, quick facts, form rows) */
@@ -115,9 +148,20 @@ a:hover{color:var(--forest-900);}
 }
 
 @media (max-width: 640px){
+  .nav-logo .eyebrow{display:none;}
   .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
   .subhero{height:280px;}
   .hero-content{padding-left:24px !important;padding-right:24px !important;}
   #hero-tittel{font-size:32px !important;}
   .foot-grid{grid-template-columns:1fr;gap:40px;}
 }
+
+/* Midlertidig design-bytar (sjå design-oversikt.html) — fjern saman med
+   [data-theme] -blokkene i :root når eit endeleg design er valt. */
+.design-badge{position:fixed;bottom:18px;right:18px;z-index:999;background:var(--ink);color:var(--white);font-family:var(--font-sans);font-size:13px;padding:10px 16px;border-radius:6px;box-shadow:0 10px 24px oklch(0.2 0.02 260 / 0.28);display:flex;align-items:center;gap:12px;}
+.design-badge a{color:var(--white);text-decoration:underline;}
+.design-badge a:hover{color:var(--white);opacity:.8;}
+
+.design-card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:16px;}
+.design-swatches{display:flex;gap:8px;}
+.design-swatch{width:28px;height:28px;border-radius:50%;border:1px solid oklch(0.2 0.02 260 / 0.12);}

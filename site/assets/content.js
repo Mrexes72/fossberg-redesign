@@ -1,4 +1,32 @@
 (function () {
+  // Midlertidig design-bytar (sjå design-oversikt.html). Legg til ein liten
+  // badge nedst til høgre når ein besøkjande har valt eit anna design enn
+  // standarden i sin eigen nettlesar (localStorage) — dette gjeld berre den
+  // nettlesaren, ikkje andre besøkjande. Fjern denne blokka saman med
+  // design-oversikt.html og [data-theme]-CSS-en når eit design er valt.
+  try {
+    var chosenDesign = localStorage.getItem("fossberg-design");
+    if (chosenDesign && chosenDesign !== "a") {
+      var badge = document.createElement("div");
+      badge.className = "design-badge";
+      var label = document.createElement("span");
+      label.textContent = "Visar design " + chosenDesign.toUpperCase();
+      var reset = document.createElement("a");
+      reset.href = "#";
+      reset.textContent = "Tilbake til standard";
+      reset.addEventListener("click", function (e) {
+        e.preventDefault();
+        localStorage.removeItem("fossberg-design");
+        location.reload();
+      });
+      badge.appendChild(label);
+      badge.appendChild(reset);
+      document.body.appendChild(badge);
+    }
+  } catch (e) {
+    /* localStorage utilgjengeleg (privat nettlesing e.l.) — ignorer */
+  }
+
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
