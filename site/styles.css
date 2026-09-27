@@ -241,8 +241,15 @@ a:hover{color:var(--forest-900);}
 }
 [data-theme="d"] .card::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
 [data-theme="d"] .card::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+/* Gavlvinkelen er kalibrert mot Kommunedelplan for Fossbergom
+   (vedtatt 24.11.2020, sak 52/2020), som krev saltak med takvinkel
+   22-34 grader i Lom sentrum. 85px reis over halve kortbreidda gjev
+   ~25-33 grader ved vanlege skjermbreidder (900-1280px) og ~27,5
+   grader på mobil — kan ikkje vere eksakt konstant for alle breidder
+   sidan clip-path ikkje kjenner til vinkelrekning, men held seg
+   innanfor kravet i det praktiske spennet. */
 [data-theme="d"] .card img{
-  clip-path:polygon(0 14px,50% 0,100% 14px,100% 100%,0 100%);
+  clip-path:polygon(0 85px,50% 0,100% 85px,100% 100%,0 100%);
 }
 [data-theme="d"] .card-title::before{
   content:"";
