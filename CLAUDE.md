@@ -42,6 +42,7 @@ Begge har ein skjult honeypot-feil (`bot-field`, styla usynleg via `.hp-field` i
 - **A · Skog** — standarden (forest-green, DM Serif Display + Manrope).
 - **B · Varme fjell** — terrakotta/rust, Fraunces + Manrope.
 - **C · Fjord** — kjølig blå-grå, Space Grotesk + Manrope.
+- **D · Fossbergom** — tjørebrunt/mosegrønt henta frå Lomskyrkja (tjærebredde veggar, raudmåla vindaugsposter) og Lom sentrum sin samanhengande byggeskikk (nasjonalparklandsby sidan 2008), pluss Fossberg sin eigen historie (røter til 1894, gradvis modernisert sidan 1953-ombygginga). Playfair Display + Manrope.
 
 **Korleis det verkar:** kvar side har eit `[data-theme="b"|"c"]`-attributt-basert palett/font-sett i `styles.css` (sjå `:root` og dei to `[data-theme=...]`-blokkene). Ein liten synkron `<script>` i `<head>` på kvar side les valet frå `localStorage`-nøkkelen `fossberg-design` og set attributtet på `<html>` før sida vert måla, slik at det ikkje "blinkar" til standarddesignet først. `content.js` viser ein liten badge nedst til høgre ("Visar design B/C") med ei lenke for å nullstille.
 

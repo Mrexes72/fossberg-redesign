@@ -44,6 +44,23 @@
   --font-serif:"Space Grotesk","Segoe UI",sans-serif;
 }
 
+/* Design D — "Fossbergom": tjørebrunt tømmer og torvtak fra Lomskyrkja og
+   Lom sentrum sin nasjonalparklandsby-byggeskikk, med Fossberg si eiga
+   historie (1894, gradvis modernisert sidan 1953) som utgangspunkt. */
+[data-theme="d"]{
+  --paper:oklch(0.95 0.014 80);
+  --paper-2:oklch(0.90 0.018 75);
+  --ink:oklch(0.18 0.02 50);
+  --ink-soft:oklch(0.40 0.02 50);
+  --ink-faint:oklch(0.56 0.018 50);
+  --forest:oklch(0.32 0.045 50);
+  --forest-900:oklch(0.16 0.03 45);
+  --forest-900-hover:oklch(0.12 0.025 45);
+  --glacier:oklch(0.46 0.06 140);
+  --line:oklch(0.82 0.016 75);
+  --font-serif:"Playfair Display",Georgia,serif;
+}
+
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{margin:0;background:var(--paper);font-family:var(--font-sans);color:var(--ink);}
