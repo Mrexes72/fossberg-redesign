@@ -12,6 +12,7 @@
   --white:oklch(0.99 0.003 90);
   --font-serif:"DM Serif Display",Georgia,serif;
   --font-sans:Manrope,"Segoe UI",system-ui,sans-serif;
+  --accent:var(--forest-900);
 }
 
 /* Design B — "Varme fjell": terrakotta/rust mot varm krem */
@@ -59,6 +60,7 @@
   --glacier:oklch(0.46 0.06 140);
   --line:oklch(0.82 0.016 75);
   --font-serif:"Playfair Display",Georgia,serif;
+  --accent:oklch(0.40 0.13 30);
 }
 
 *{box-sizing:border-box;}
@@ -91,7 +93,7 @@ a:hover{color:var(--forest-900);}
 .navlink{font-family:Manrope,sans-serif;font-size:15px;font-weight:600;color:var(--ink);}
 .navlink:hover{color:var(--forest-900);}
 .navlink.is-active{color:var(--forest-900);}
-.navlink.is-active::after{content:"";display:block;height:2px;background:var(--forest-900);margin-top:6px;}
+.navlink.is-active::after{content:"";display:block;height:2px;background:var(--accent);margin-top:6px;}
 
 /* Cards */
 .card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
@@ -182,3 +184,111 @@ a:hover{color:var(--forest-900);}
 .design-card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:16px;}
 .design-swatches{display:flex;gap:8px;}
 .design-swatch{width:28px;height:28px;border-radius:50%;border:1px solid oklch(0.2 0.02 260 / 0.12);}
+
+/* ============================================================
+   Design D — "Fossbergom": strukturelt lag (former, ikkje berre
+   fargar). Byggjer på Lomskyrkja sine skarpe, saga tømmerkantar og
+   raude vindaugsposter, og Fossbergom sin faste, hjørnemerkte
+   byggeskikk. Sjå fossbergom-konseptet (Artifact) for grunngjeving.
+   Fjern heile denne blokka + hero-frame/hero-frame-img/
+   hero-frame-overlay-klassane i index.html når eit design er valt
+   og D ikkje er det. ============================================ */
+
+/* Skarpe kutt gjennomgåande i staden for runda hjørne */
+[data-theme="d"] .card,
+[data-theme="d"] .btn,
+[data-theme="d"] .field input,
+[data-theme="d"] .field textarea{
+  border-radius:0;
+}
+[data-theme="d"] .foot-grid > div:last-child{
+  border-radius:0 !important;
+}
+
+/* Knappar: eitt kutta hjørne, som ein saga tømmerende */
+[data-theme="d"] .btn{
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+}
+
+/* Navbar: tyngre dørstokk-linje og eit lite raudt merke i logoen */
+[data-theme="d"] .nav{
+  border-bottom-width:3px;
+  border-bottom-color:var(--forest-900);
+}
+[data-theme="d"] .nav-logo .serif::after{
+  content:"◆";
+  display:inline-block;
+  margin-left:10px;
+  font-size:11px;
+  color:var(--accent);
+  vertical-align:middle;
+}
+
+/* Kort: gavl-klipt bilete + opne hjørnemerke, som snikkarmerke */
+[data-theme="d"] .card{
+  position:relative;
+  border:none;
+  overflow:visible;
+}
+[data-theme="d"] .card::before,
+[data-theme="d"] .card::after{
+  content:"";
+  position:absolute;
+  width:16px;
+  height:16px;
+  border:2px solid var(--forest-900);
+  pointer-events:none;
+}
+[data-theme="d"] .card::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+[data-theme="d"] .card::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+[data-theme="d"] .card img{
+  clip-path:polygon(0 14px,50% 0,100% 14px,100% 100%,0 100%);
+}
+[data-theme="d"] .card-title::before{
+  content:"";
+  display:inline-block;
+  width:8px;
+  height:8px;
+  margin:0 8px 3px 0;
+  background:var(--accent);
+  vertical-align:middle;
+}
+
+/* Hero og subhero: biletet sett inn som eit vindauge i tjørevegg.
+   Bileta er erstatta element (img), så inset åleine held dei ikkje
+   utstrekt — width/height må setjast eksplisitt med calc(). */
+[data-theme="d"] .subhero{background:var(--forest-900);}
+[data-theme="d"] .subhero img{inset:24px;width:calc(100% - 48px);height:calc(100% - 48px);}
+[data-theme="d"] .subhero .overlay{inset:24px;}
+[data-theme="d"] .subhero .content{left:24px;right:24px;bottom:24px;}
+[data-theme="d"] .hero-frame{background:var(--forest-900);}
+[data-theme="d"] .hero-frame-img{inset:24px !important;width:calc(100% - 48px) !important;height:calc(100% - 48px) !important;}
+[data-theme="d"] .hero-frame-overlay{inset:24px !important;}
+[data-theme="d"] .hero-content{left:24px !important;right:24px !important;bottom:24px !important;}
+
+/* Footer: éin tjørebrun tone, og same hjørnemerke på CTA-boksen */
+[data-theme="d"] .footer{background:var(--forest-900);}
+[data-theme="d"] .foot-grid > div:last-child{position:relative;}
+[data-theme="d"] .foot-grid > div:last-child::before,
+[data-theme="d"] .foot-grid > div:last-child::after{
+  content:"";
+  position:absolute;
+  width:14px;
+  height:14px;
+  border:2px solid var(--accent);
+  pointer-events:none;
+}
+[data-theme="d"] .foot-grid > div:last-child::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+[data-theme="d"] .foot-grid > div:last-child::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+
+/* Historie-tidslinja: prikken i raudt i staden for tjørebrunt */
+[data-theme="d"] .timeline-dot{background:var(--accent);}
+
+@media (max-width:640px){
+  [data-theme="d"] .subhero img{inset:16px;width:calc(100% - 32px);height:calc(100% - 32px);}
+  [data-theme="d"] .subhero .overlay{inset:16px;}
+  [data-theme="d"] .subhero .content{left:16px;right:16px;bottom:16px;}
+  [data-theme="d"] .hero-frame-img{inset:16px !important;width:calc(100% - 32px) !important;height:calc(100% - 32px) !important;}
+  [data-theme="d"] .hero-frame-overlay{inset:16px !important;}
+  [data-theme="d"] .hero-content{left:16px !important;right:16px !important;bottom:16px !important;}
+}
